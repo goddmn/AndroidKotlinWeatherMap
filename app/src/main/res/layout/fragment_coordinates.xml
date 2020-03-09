@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CoordinatesFragment">
+
+    <RelativeLayout
+        android:id="@+id/main_coord_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btn_city_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Назад"/>
+
+    <RelativeLayout
+        android:id="@+id/input_layout_coord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_coord_lat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter latitude"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_coord_lon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter longtitude"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/et_coord_lat" />
+
+        <Button
+            android:id="@+id/btn_enter_coord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ГОТОВО"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_below="@id/et_coord_lon"/>
+
+        <Button
+            android:id="@+id/btn_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Карта"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/btn_enter_coord"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_layout_coord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/input_layout_coord"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/temp_min_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/temp_max_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/coord_lat_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/coord_lon_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/weather_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/visibility_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/city_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/country_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>
