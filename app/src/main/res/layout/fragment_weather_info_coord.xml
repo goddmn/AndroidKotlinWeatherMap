@@ -3,47 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CityFragment">
-
-    <Button
-        android:id="@+id/btn_city_back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Назад"/>
+    tools:context=".ui.WeatherInfoCoordFragment">
 
     <RelativeLayout
-        android:id="@+id/input_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/et_city_name"
-            android:hint="Enter city name"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" />
-
-        <Button
-            android:id="@+id/enter_city_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Готово"
-            android:background="@color/colorPrimary"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:layout_below="@id/et_city_name"
-            android:layout_marginTop="12dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/info_layout_coord"
+        android:id="@+id/info_layout_from_coord"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_below="@id/input_layout"
         android:paddingTop="16dp">
 
         <LinearLayout
@@ -91,7 +57,5 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
-
-    </RelativeLayout>
-
+</RelativeLayout>
 </RelativeLayout>

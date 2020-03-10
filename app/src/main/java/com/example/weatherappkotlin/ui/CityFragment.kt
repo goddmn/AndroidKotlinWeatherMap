@@ -34,13 +34,16 @@ class CityFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         enter_city_name.setOnClickListener {
             city = et_city_name.text.toString()
-            val call =  retrofit?.getCityListByName(city, API)
-            call?.enqueue(object : Callback<WeatherModel>{
+            val call = retrofit?.getCityListByName(city, API)
+            call?.enqueue(object : Callback<WeatherModel> {
                 override fun onFailure(call: Call<WeatherModel>, t: Throwable) {
                     Toast.makeText(context, "onFailure", Toast.LENGTH_LONG).show()
                 }
 
-                override fun onResponse(call: Call<WeatherModel>, response: Response<WeatherModel>) {
+                override fun onResponse(
+                    call: Call<WeatherModel>,
+                    response: Response<WeatherModel>
+                ) {
                     val list = response.body()
                     coord_lat_txt.text = list?.coord?.lat.toString()
                     coord_lon_txt.text = list?.coord?.lon.toString()
@@ -54,7 +57,7 @@ class CityFragment : Fragment() {
             })
         }
         btn_city_back.setOnClickListener {
-            val intent = Intent (getActivity(), LauncherActivity::class.java)
+            val intent = Intent(getActivity(), LauncherActivity::class.java)
             getActivity()?.startActivity(intent)
         }
     }
